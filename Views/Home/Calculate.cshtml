@@ -1,0 +1,22 @@
+﻿@model WebApplication15.Models.Stall;
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    double dis=0;
+    if (Model.stallType == "goldStall")
+    {
+        dis = @Model.costPerDay *@Model.totalNumberDays * 0.025;
+    }
+    else if (Model.stallType == "platinumStall")
+    {
+        dis = @Model.costPerDay * @Model.totalNumberDays * 0.025;
+
+    }
+    int total = Model.costPerDay * Model.totalNumberDays-(int)dis;
+}
+<h2>Details Page</h2>
+
+Cost Per Day:@Model.costPerDay<br />
+Stall Type:@Model.stallType
+Total Cost:@total

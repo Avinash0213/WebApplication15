@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<form method="post" action="~/Home/Calculate">
+    <div class="d-flex flex-row mb-3 justify-content-around">
+        <label>Cost per Day</label>
+        <input type="text" id="costPerDay" name="costPerDay" /><br />
+    </div>
+    <div class="d-flex flex-row mb-3 justify-content-around">
+        <label>Total Number of Days</label>
+        <input type="text" id="totalNumberOfDays" name="totalNumberDays" /><br />
+    </div>
+    <div class="d-flex flex-row mb-3 justify-content-around"><label>Stall Type</label>
+    <select name="stallType" id="stallType">
+        <option value="stall">Stall</option>
+        <option value="goldStall">Gold Stall</option>
+        <option value="platinumStall">Platinum Stall</option>
+    </select><br /></div>
+    <button type="submit" id="calculate">Calculate</button>
+</form> 
